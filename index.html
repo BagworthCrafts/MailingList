@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+	@media (max-width: 640px){
+		iframe{
+		height: 900px /*whatever you need, to make the scrollbar hide on testing, and the content of the iframe reveal (on mobile/phone or other target devices) */
+		}
+	}
+	@media (max-width: 420px){
+		iframe{
+		height: 1000px /*and so on until and as needed */
+		}
+	}
+  </style>
+</head>
+<body>
+
+<!-- <div class="iframe-container"> -->
+	<iframe id="bcIframe" src="https://script.google.com/macros/s/AKfycbxJB_AgF6LEnEyb--vso9o5OwGgfoRruGLxDJZaUntGH6ZVnL0_-lp0z6bn2pAJuq-g/exec" width="100%" height="800px" frameBorder="0"></iframe>
+<!-- </div> -->
+
+
+  <script>
+  
+	
+  	var src = document.getElementById('bcIframe').src;
+	var loc = window.location.search; <!-- get the question mark onwards in the url -->
+	document.getElementById('bcIframe').src = src + loc;
+		
+ 	<!--const params = new URLSearchParams(loc); <!-- put the params into an array type thing -->
+  </script>
+</body>
+</html>
